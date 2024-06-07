@@ -161,10 +161,10 @@ def metrics():
             f1_lr = lr_metric['f1']
             recall_lr = lr_metric['recall']
             precision_lr = lr_metric['precision']
-            print(f"Accuracy: {accuracy_lr}")
-            print(f"F1 Score: {f1_lr}")
-            print(f"Recall: {recall_lr}")
-            print(f"Precision: {precision_lr}")
+            print(f"Accuracy : {accuracy_lr}")
+            print(f"F1 Score : {f1_lr}")
+            print(f"Recall : {recall_lr}")
+            print(f"Precision : {precision_lr}")
             # Naive Bayes
             accuracy_nb = nb_metric['accuracy']
             f1_nb = nb_metric['f1']
