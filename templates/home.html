@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/home.css">
+    <title>AI Content Detector</title>
+</head>
+<body>
+    <div class="container" id="left-container">
+        <h1>AI Content Detector</h1>
+        <p> Welcome to our AI Content Detector, a convenient tool designed to assist you in discerning the origins of text content. Whether you're curious about the authenticity of an article, a piece of creative writing, or any textual content, our platform offers a reliable solution. By leveraging the power of cutting-edge technology, we employ two advanced machine learning models: <b>Naive Bayes</b>, <b>Logistic Regression</b> and <b>Neural Networks</b>.</p>
+    </div>
+    <div class="container" id="middle-container">
+        <h2>Enter Text:</h2>
+        <form action='/predict' method="post">
+            <textarea id="input-text" name="text">{{ input_text if input_text else '' }}</textarea>
+            <input type="submit" name="model" value="Naive Bayes">
+            <input type="submit" name="model" value="Logistic Regression">
+            <input type="submit" name="model" value="Neural Networks">
+        </form>
+        <form action='/EDA' method="post">
+            <input type="submit" name="model" value="EDA">
+        </form>
+        <form action='/Metrics' method="post">
+            <input type="submit" name="model" value="Metrics">
+        </form>
+    </div>
+    <div class="container" id="right-container">
+        <h2>Results:</h2>
+        <p>{{ prediction }}</p>
+    </div>
+</body>
+</html>

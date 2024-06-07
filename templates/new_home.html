@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/new_home.css">
+    <title>AI Content Detector</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="new_home.html">Home</a>
+            <a href="new_eda.html">EDA</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="background-image"></div>
+        <div class="centered">
+            <div class="title">Detect the AI generated text</div>
+            <div class="subtitle">Welcome to our AI Content Detector. Verify the origins of any text with our tool using Naive Bayes, Logistic Regression, and Neural Networks models.</div>
+            <button class="button" onclick="scrollToTestSection()">Test</button>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h1>Test the AI Content Detector</h1>
+        <div class="content-wrapper">
+            <div class="test-area">
+                <form action='/predict' method="post">
+                    <textarea placeholder="Test your prompt here" name="text">{{ input_text if input_text else '' }}</textarea>
+                    <div class="button-group">
+                        <input type="submit" name="model" value="Naive Bayes">
+                        <input type="submit" name="model" value="Logistic Regression">
+                        <input type="submit" name="model" value="Neural Networks">
+                    </div>
+                </form>
+            </div>
+            <div class="results-display">
+                <h3>Results are going to be displayed here:</h3>
+                <p>{{ prediction }}</p>
+                {% if error %}
+                <h3 style="color: red;">Error: {{ error }}</h3>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="intro">
+            <h1>Model Metrics</h1>
+            <h3>Let's compare between the 3 models we used</h3>
+            <p>metric para</p>
+            <p>paragraph for metric</p>
+        </div>
+        <div id="chart_div" class="chart"></div>
+    </div>
+
+    <div class="eda">
+        <h1>Exploratory Data Analysis</h1>
+        <br>
+        <div class="eda-container">
+            <div class="cont">
+                <div id="chart1" class="chart1"></div>
+                <h4>AI Generated vs Human Written Texts</h4>
+                <div class="description">The pie chart above illustrates the distribution of texts within our dataset, categorizing them based on their origin—either human-written or AI-generated. Human-written texts amount to 20,458 units, whereas AI-generated texts total 17,497 units. This visual representation highlights that human-written texts slightly outnumber the AI-generated texts in our dataset.</div>
+            </div>
+            <div class="cont">
+                <div id="chart2" class="chart1"></div>
+                <h4>Occurring Words for Generated text Unigram</h4>
+                <div class="description">This bar chart illustrates the top 25 most frequently occurring words in a generated text unigram, with "student" being the most frequent, appearing 50,000 times. Following closely are "car" and "make," each with frequencies above 30,000. The prevalence of these words suggests that topics related to students, activities, and various concepts are central to the generated text, providing insight into the main themes and focus areas within the content.</div>
+            </div>
+            <div class="cont">
+                <div id="chart3" class="chart1">
+                    <img src="/static/images/bigram.png" id="big" alt="bigram">
+                </div>
+                <h4>Bigram Text</h4>
+                <div class="description">
+                    The word cloud image presents a visual representation of the most frequently occurring bigrams within our dataset. In this image, "Electoral College" is the most prominent bigram, indicating its high frequency in the dataset. Other significant bigrams include "car usage," "cell phone," among others. The size of each bigram in the word cloud corresponds to its frequency, with larger words appearing more frequently.</div>
+            </div>
+        </div>
+        <div class="see_more">
+            <button id="see" onclick="window.location.href='eda.html'">See more</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-title">AI Content Detector</div>
+            <div class="footer-buttons">
+                <button class="footer-button" onclick="scrollToTestSection()">Test</button>
+                <button class="footer-button" onclick="window.location.href='home.html'">Home</button>
+                <button class="footer-button" onclick="window.location.href='eda.html'">EDA</button>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            &copy; 2024 AI Content Detector. All rights reserved.
+        </div>
+    </footer>
+</body>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart', 'bar']});
+
+    google.charts.setOnLoadCallback(drawCharts);
+    google.charts.setOnLoadCallback(drawMainChart);
+
+    function drawCharts() {
+        var data = google.visualization.arrayToDataTable([
+            ['type', 'units'],
+            ['Generated', 17497],
+            ['Human', 20548]
+        ]);
+
+        var options = {
+            pieHole: 0.4,
+            colors: ['#FF00FF', '#0000FF'],
+            backgroundColor: '#FFF',
+            chartArea: {
+                width: '100%',
+                height: '85%'
+            },
+        };
+
+        var chartElement = document.getElementById('chart1');
+        var chart = new google.visualization.PieChart(chartElement);
+        chart.draw(data, options);
+    }
+
+    function drawMainChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Model', 'Precision', 'Recall', 'Accuracy', 'F1 Score'],
+            ['Logistic Regression', Math.random() * 100, Math.random() * 100, Math.random() * 100, Math.random() * 100],
+            ['Neural Networks', Math.random() * 100, Math.random() * 100, Math.random() * 100, Math.random() * 100],
+            ['Naive Bayes', Math.random() * 100, Math.random() * 100, Math.random() * 100, Math.random() * 100]
+        ]);
+
+        var options = {
+            title: 'Model Metrics',
+            chartArea: {
+                width: '50%',
+            },
+            backgroundColor: '#F6F6F6',
+            hAxis: {
+                title: 'Metrics',
+                minValue: 0
+            },
+            vAxis: {
+                title: 'Model'
+            },
+            legend: { position: 'top', maxLines: 3 },
+            bar: { groupWidth: '75%' },
+            colors: ['#FF00FF', '#000000', '#CCCCCC', '#0000FF'], // White, Black, Light Gray, Blue
+            animation: {
+                startup: true,
+                duration: 1000,
+                easing: 'in'
+            }
+        };
+
+        var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+    }
+</script>
+
+<script type="text/javascript">
+    function scrollToTestSection() {
+        var testSection = document.querySelector('.test-section');
+        testSection.scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+
+<script type="text/javascript">
+    google.charts.load('current', {packages: ['corechart', 'bar']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Word', 'Frequency'],
+            ['student', 50000],
+            ['car', 30000],
+            ['make', 26500],
+            ['help', 26000],
+            ['like', 25000],
+            ['also', 24000],
+            ['people', 24000],
+            ['school', 23000],
+            ['time', 18600],
+            ['may', 18600],
+            ['work', 18000],
+            ['learn', 18000],
+            ['electoral', 17500],
+            ['college', 17000],
+            ['state', 17000],
+            ['important', 16000],
+            ['one', 16000],
+            ['vote', 14000],
+            ['take', 14000],
+            ['usage', 12800],
+            ['use', 12500],
+            ['would', 12000],
+            ['limit', 12000],
+            ['way', 12000],
+            ['lead', 12000]
+        ]);
+
+        var options = {
+            chartArea: {
+                width: '60%',
+                height: '86%'
+            },
+            hAxis: {
+                title: 'Frequency',
+                minValue: 0
+            },
+            vAxis: {
+                title: 'Word'
+            },
+            bars: 'horizontal',
+            colors: ['#1f77b4']
+        };
+
+        var chart = new google.visualization.BarChart(document.getElementById('chart2'));
+        chart.draw(data, options);
+    }
+</script>
+
+</html>

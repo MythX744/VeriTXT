@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EDA</title>
+  <link rel="stylesheet" href="/static/css/eda.css">
+</head>
+<body>
+  <div class="container">
+    <div id="title">
+      <h1>Exploratory Data Analysis (EDA)</h1>
+      <div class="storytelling">
+        <h2>Storytelling:</h2>
+        <p>Discover the power of storytelling through our exploratory data analysis (EDA) journey. Embarking on a quest to unravel the narratives buried within textual data, we wielded the transformative tool of preprocessing. Leveraging a robust function, we diligently molded raw text into a refined state, stripping away noise and harmonizing its essence. With keen eyes, we delved into the realm of n-grams, illuminating the interconnected patterns within language. Through our analysis, we uncovered the emotional spectrum, delineating between positivity and negativity woven into the fabric of reviews. Witnessing the birth of new features, we marveled at their distribution, painting a vivid portrait of textual landscapes. Our journey didn't end there; we adorned our findings with visual splendor, crafting immersive landscapes of features and word clouds, each pixel a testament to the richness of expression. In our pursuit of understanding, we unearthed the gems of insight, illuminating the most frequent words nestled within the tapestry of n-grams, enriching our understanding of the dataset's narrative tapestry.</p>
+      </div>
+      <br>
+      <h1>What we did??</h1>
+    </div>
+
+    <!-- Divs for the charts -->
+    <div class="charts-container">
+      <div class="chart-section">
+        <div class="chart-description">
+          <h3>How many positive and negative reviews?</h3>
+          <p>The bar chart displayed on the right illustrates the distribution of texts within our dataset, categorized based on their origin—either human-written or AI-generated. The x-axis represents these two categories, where '0' signifies human-written text and '1' indicates AI-generated text. The y-axis denotes the count of texts in each category. From the graph, it is evident that human-written texts (category '0') significantly outnumber the AI-generated texts (category '1'). This disparity highlights the prevalence of human-written content in our dataset, providing a substantial basis for comparative analysis in our exploratory data analysis (EDA).</p>
+        </div>
+        <div class="chart-image">
+          <img src="/static/image/c1.png" alt="Chart 1">
+        </div>
+      </div>
+      <div id="title_div"><h3>Exploring the Length:</h3></div>
+      <div class="chart-section">
+        <div class="chart-image">
+          <img src="/static/image/cl2.png" alt="Chart 1">
+        </div>
+        <div class="chart-description">
+          <h3>Density Plot of Length</h3>
+          <p>The density plot of text lengths illustrates the distribution of lengths for both human-written and AI-generated texts within our dataset. On the x-axis, we have the length of the texts, while the y-axis represents the density. The blue curve corresponds to human-written texts (denoted as '0'), and the orange curve corresponds to AI-generated texts (denoted as '1'). From the plot, it is evident that AI-generated texts tend to be shorter, with a higher peak around shorter lengths compared to human-written texts. The distribution of human-written texts is broader and extends further, indicating a wider range of text lengths. This visualization helps us understand the inherent differences in the length of texts based on their origin, providing insights into stylistic characteristics. </p>
+        </div>
+      </div>
+      <div class="chart-section">
+        <div class="chart-description">
+          <h3>BoxPlot of Length</h3>
+          <p>The boxplot provides a summary of the length distribution of texts in the dataset. The x-axis represents the length of the texts, while the y-axis shows the value range. The box represents the interquartile range (IQR) where the middle 50% of the data points lie, with the line inside the box indicating the median length. The whiskers extend to the smallest and largest values within 1.5 times the IQR from the lower and upper quartiles, respectively. Points outside this range are considered outliers. The boxplot shows that the majority of text lengths fall within a specific range, with a median length around 1000 characters. There are numerous outliers extending beyond 3000 characters, suggesting the presence of significantly longer texts in the dataset. This visualization provides a clear overview of the central tendency, variability, and potential outliers in text lengths.</p>
+        </div>
+        <div class="chart-image">
+          <img src="/static/image/cl1.png" alt="Chart 1">
+        </div>
+      </div>
+      <div class="chart-section">
+        <div class="chart-image">
+          <img src="/static/image/cl3.png" alt="Chart 1">
+        </div>
+      </div>
+      <div id="title_div"><h3>Exploring the Word Count:</h3></div>
+      <div class="chart-section">
+        <div class="chart-description">
+          <h3>Density Plot of Word Count</h3>
+          <p>This boxplot displays the distribution of word counts across the dataset. The x-axis represents the word count, while the y-axis shows the value range. The majority of texts contain between 100 and 300 words, with some outliers having up to 800 words. This chart helps us understand the typical word count of texts and highlights any particularly lengthy texts in terms of word count. </p>
+        </div>
+        <div class="chart-image">
+          <img src="/static/image/wc2.png" alt="Chart 1">
+        </div>
+      </div>
+      <div class="chart-section">
+        <div class="chart-image">
+          <img src="/static/image/wc1.png" alt="Chart 1">
+        </div>
+        <div class="chart-description">
+          <h3>BoxPlot of Word Count</h3>
+          <p>The density plot depicts the distribution of word counts for human-written (0) and AI-generated (1) texts. The x-axis represents the word count, while the y-axis shows the density. The blue curve corresponds to human-written texts, and the orange curve represents AI-generated texts. Human-written texts have a broader distribution of word counts, while AI-generated texts tend to be more concentrated around specific word counts, indicating a difference in writing style and verbosity.</p>
+        </div>
+      </div>
+      <div class="chart-section">
+        <div class="chart-image">
+          <img src="/static/image/wc3.png" alt="Chart 1">
+        </div>
+      </div>
+      <div id="title_div"><h3>Exploring the Mean Word Length:</h3></div>
+      <div class="chart-section">
+        <div class="chart-image">
+          <img src="/static/image/mwc1.png" alt="Chart 1">
+        </div>
+        <div class="chart-description">
+          <h3>Density Plot of Mean Word Length</h3>
+          <p>Description of the chart 1.</p>
+        </div>
+      </div>
+      <div class="chart-section">
+        <div class="chart-description">
+          <h3>BoxPlot of Mean Word Length</h3>
+          <p>Description of the chart 1. </p>
+        </div>
+        <div class="chart-image">
+          <img src="/static/image/mwc2.png" alt="Chart 1">
+        </div>
+      </div>
+      <div class="chart-section">
+        <div class="chart-image">
+          <img src="/static/image/mwc3.png" alt="Chart 1">
+        </div>
+      </div>
+      <div id="title_div"><h3>Exploring the Mean Sentence Length:</h3></div>
+      <div class="chart-section">
+        <div class="chart-description">
+          <h3>Density Plot of Mean Sentence Length</h3>
+          <p>Description of the chart 1.</p>
+        </div>
+        <div class="chart-image">
+          <img src="/static/image/msl1.png" alt="Chart 1">
+        </div>
+      </div>
+      <div class="chart-section">
+        <div class="chart-image">
+          <img src="/static/image/msl2.png" alt="Chart 1">
+        </div>
+        <div class="chart-description">
+          <h3>BoxPlot of Mean Sentence Length</h3>
+          <p>Description of the chart 1. </p>
+        </div>
+      </div>
+      <div class="chart-section">
+        <div class="chart-image">
+          <img src="/static/image/msl3.png" alt="Chart 1">
+        </div>
+      </div>
+      <div id="title_div"><h3>Exploring the Vocabulary(Unigram):</h3></div>
+      <div class="chart-section">
+        <div class="chart-description">
+          <h3>Frequently Occuring words(Generated)</h3>
+          <p>Description of the chart 1.</p>
+        </div>
+        <div class="chart-image">
+          <img src="/static/image/uni1.png" alt="Chart 1">
+        </div>
+      </div>
+      <div class="chart-section">
+        <div class="chart-image">
+          <img src="/static/image/uni2.png" alt="Chart 1">
+        </div>
+        <div class="chart-description">
+          <h3>Frequently Occuring words(Human-written)</h3>
+          <p>Description of the chart 1.</p>
+        </div>
+      </div>
+      <div id="title_div"><h3>Exploring the Vocabulary(Bigrams):</h3></div>
+      <div class="chart-section">
+        <div class="chart-description">
+          <h3>Frequently Occuring words(Generated)</h3>
+          <p>Description of the chart 1. </p>
+        </div>
+        <div class="chart-image">
+          <img src="/static/image/bi1.png" alt="Chart 1">
+        </div>
+      </div>
+      <div class="chart-section">
+        <div class="chart-image">
+          <img src="/static/image/bigram_cloud_label_0.png" alt="Chart 1" class="cloud">
+        </div>
+        <div class="chart-description">
+          <h3>bigram cloud LABEL 0</h3>
+          <p>Description of the chart 1. Description of the chart 1.Description of the chart 1.Description of the chart 1.Description of the chart 1.Description of the chart 1.Description of the chart 1.Description of the chart 1.</p>
+        </div>
+      </div>
+      <div class="chart-section">
+        <div class="chart-description">
+          <h3>Frequently Occuring words(Human-written)</h3>
+          <p>Description of the chart 1.</p>
+        </div>
+        <div class="chart-image">
+          <img src="/static/image/bi2.png" alt="Chart 1">
+        </div>
+      </div>
+      <div class="chart-section">
+        <div class="chart-image">
+          <img src="/static/image/bigram_cloud_label_1.png" alt="Chart 1" class="cloud">
+        </div>
+        <div class="chart-description">
+          <h3>Bigram word cloud</h3>
+          <p>Description of the chart 1.</p>
+        </div>
+      </div>
+    </div>
+    <div id="title">
+      <h1>Conclusion</h1>
+      <div class="storytelling">
+        <p>Discover the power of storytelling through our exploratory data analysis (EDA) journey. Embarking on a quest to unravel the narratives buried within textual data, we wielded the transformative tool of preprocessing. Leveraging a robust function, we diligently molded raw text into a refined state, stripping away noise and harmonizing its essence. With keen eyes, we delved into the realm of n-grams, illuminating the interconnected patterns within language. Through our analysis, we uncovered the emotional spectrum, delineating between positivity and negativity woven into the fabric of reviews. Witnessing the birth of new features, we marveled at their distribution, painting a vivid portrait of textual landscapes. Our journey didn't end there; we adorned our findings with visual splendor, crafting immersive landscapes of features and word clouds, each pixel a testament to the richness of expression. In our pursuit of understanding, we unearthed the gems of insight, illuminating the most frequent words nestled within the tapestry of n-grams, enriching our understanding of the dataset's narrative tapestry.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
