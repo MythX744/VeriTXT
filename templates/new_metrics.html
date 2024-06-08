@@ -26,9 +26,17 @@
 
   <br>
 
-  <h1 class="center-title">Metrics</h1>
+    <div class="title-chart-container">
+        <div id="chyata">
+            <h1 class="center-title">Metrics</h1>
+        </div>
+        <div id="main_chart_div" class="chart-container" style="width: 700px; height: 500px;"></div>
+    </div>
+
+    <hr>
     <div class="main-container">
         <div class="table-container">
+            <h1 class="center-title">Table of Metrics Values</h1>
             <table>
                 <tr>
                     <th>Model</th>
@@ -53,14 +61,13 @@
                 </tr>
                 <tr>
                     <td>Neural Network</td>
-                    <<td>{{ accuracy_nn }}</td>
+                    <td>{{ accuracy_nn }}</td>
                     <td>{{ f1_nn }}</td>
                     <td>{{ recall_nn }}</td>
                     <td>{{ precision_nn }}</td>
                 </tr>
             </table>
         </div>
-        <div id="main_chart_div" class="chart-container" style="width: 700px; height: 500px;"></div>
     </div>
 
     <hr>
@@ -69,7 +76,7 @@
         <div id="accuracy_chart" class="metric-chart" style="width: 600px; height: 400px;"></div>
         <div class="metric-description">
             <h1>Accuracy</h1>
-            <p>The Logistic Regression model has the highest accuracy at 98.58%, followed by the Neural Network at 96.10%, and the Naive Bayes model at 95.63%.</p>
+            <p>Accuracy in machine learning measures the proportion of correctly classified instances out of the total evaluated. While it offers a straightforward evaluation of a model's correctness, it may not fully reflect performance in scenarios with imbalanced class distributions. Thus, it's often considered alongside other metrics like precision, recall, and F1 score for a comprehensive assessment.The Logistic Regression model has the highest accuracy at 98.58%, followed by the Neural Network at 96.10%, and the Naive Bayes model at 95.63%.</p>
         </div>
     </div>
 
@@ -79,7 +86,7 @@
         <div id="f1_chart" class="metric-chart" style="width: 600px; height: 400px;"></div>
         <div class="metric-description">
             <h1>F1 Score</h1>
-            <p>The Logistic Regression model also leads in F1 score with 98.46%, while the Neural Network and Naive Bayes models have F1 scores of 95.76% and 95.22%, respectively.</p>
+            <p>The F1 score in machine learning is a metric that combines precision and recall into a single value. It provides a balance between these two metrics by calculating the harmonic mean of precision and recall. This means that the F1 score takes both false positives and false negatives into account, making it particularly useful in situations where class imbalance exists. A high F1 score indicates both good precision and recall, reflecting a model's ability to correctly classify instances while minimizing false positives and false negatives.The Logistic Regression model also leads in F1 score with 98.46%, while the Neural Network and Naive Bayes models have F1 scores of 95.76% and 95.22%, respectively.</p>
         </div>
     </div>
 
@@ -89,7 +96,7 @@
         <div id="recall_chart" class="metric-chart" style="width: 600px; height: 400px;"></div>
         <div class="metric-description">
             <h1>Recall</h1>
-            <p>In terms of recall, the Logistic Regression model is again the highest at 98.13%. The Neural Network and Naive Bayes models have recall scores of 94.83% and 94.01%, respectively.</p>
+            <p>Recall, or sensitivity, in machine learning measures a model's ability to correctly identify all relevant instances in a dataset. It quantifies the proportion of true positives among all actual positives, indicating how well the model captures relevant instances while minimizing false negatives. High recall is crucial in scenarios where missing positive instances is costly, such as in medical diagnoses or anomaly detection.In terms of recall, the Logistic Regression model is again the highest at 98.13%. The Neural Network and Naive Bayes models have recall scores of 94.83% and 94.01%, respectively.</p>
         </div>
     </div>
 
@@ -99,13 +106,13 @@
         <div id="precision_chart" class="metric-chart" style="width: 600px; height: 400px;"></div>
         <div class="metric-description">
             <h1>Precision</h1>
-            <p>Precision is highest in the Logistic Regression model at 98.80%, with the Neural Network at 96.70% and the Naive Bayes model at 96.47%.</p>
+            <p>Precision in machine learning is a metric that measures the accuracy of positive predictions made by a model. It quantifies the proportion of true positive predictions among all instances predicted as positive. In other words, precision reflects the model's ability to correctly identify relevant instances while minimizing false positives. A high precision indicates that the model is making few incorrect positive predictions, making it useful in scenarios where minimizing false positives is critical, such as medical diagnoses or fraud detection.Precision is highest in the Logistic Regression model at 98.80%, with the Neural Network at 96.70% and the Naive Bayes model at 96.47%.</p>
         </div>
     </div>
 
   <footer class="footer">
     <div class="footer-content">
-      <div class="footer-title">AI Content Detector</div>
+      <div class="footer-title">VeriTXT</div>
       <div class="footer-buttons">
         <button class="footer-button" name="model" onclick="window.location.href='/'">Test</button>
         <button class="footer-button" name="model" onclick="window.location.href='/'">Home</button>
@@ -118,7 +125,7 @@
       </div>
     </div>
     <div class="footer-copyright">
-      &copy; 2024 AI Content Detector. All rights reserved.
+      &copy; 2024 VeriTXT. All rights reserved.
     </div>
   </footer>
 </body>
@@ -151,7 +158,12 @@
             legend: { position: 'top', maxLines: 3 },
             bar: { groupWidth: '75%' },
             isStacked: false,
-            colors: ['#ee7b49', '#ea5925', '#b62f18', '#3f0e0b']
+            colors: ['#ee7b49', '#ea5925', '#b62f18', '#3f0e0b'],
+            animation: {
+            startup: true,
+            duration: 1500,
+            easing: 'out'
+            }
         };
 
         var chart = new google.visualization.BarChart(document.getElementById('main_chart_div'));
@@ -171,7 +183,7 @@
             hAxis: {title: 'Models'},
             vAxis: {title: 'Accuracy (%)'},
             legend: { position: 'none' },
-            colors: ['#ea5925']
+            colors: ['#ee7b49']
         };
 
         var chart = new google.visualization.ColumnChart(document.getElementById('accuracy_chart'));
@@ -211,7 +223,7 @@
             hAxis: {title: 'Models'},
             vAxis: {title: 'Recall (%)'},
             legend: { position: 'none' },
-            colors: ['#ea5925']
+            colors: ['#b62f18']
         };
 
         var chart = new google.visualization.ColumnChart(document.getElementById('recall_chart'));
@@ -231,7 +243,7 @@
             hAxis: {title: 'Models'},
             vAxis: {title: 'Precision (%)'},
             legend: { position: 'none' },
-            colors: ['#ea5925']
+            colors: ['#3f0e0b']
         };
 
         var chart = new google.visualization.ColumnChart(document.getElementById('precision_chart'));

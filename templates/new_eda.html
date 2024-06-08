@@ -79,11 +79,11 @@
 
   <div class="eda_container">
     <div class="chart_description">
-      <h3>TOP 25 Occuring words for Generated Text Unigram </h3>
-      <p>This bar chart illustrates the top 25 most frequently occurring words in a generated text unigram, with "student" being the most frequent, appearing nearly 50,000 times. Following closely are "car" and "make," each with frequencies above 30,000. Other common words include "help," "like," "also," "people," "school," and "time," each appearing between 20,000 to 30,000 times. Towards the lower end of the top 25, words such as "vote," "take," "usage," "use," "would," "limit," "way," and "lead" have frequencies closer to 10,000. The prevalence of these words suggests that topics related to students, activities, and various concepts are central to the generated text, providing insight into the main themes and focus areas within the content.</p>
+      <h3>Density Plot of Length </h3>
+      <p>The density plot of text lengths illustrates the distribution of lengths for both human-written and AI-generated texts within our dataset. On the x-axis, we have the length of the texts, while the y-axis represents the density. The blue curve corresponds to human-written texts (denoted as '0'), and the orange curve corresponds to AI-generated texts (denoted as '1'). From the plot, it is evident that AI-generated texts tend to be shorter, with a higher peak around shorter lengths compared to human-written texts. The distribution of human-written texts is broader and extends further, indicating a wider range of text lengths. This visualization helps us understand the inherent differences in the length of texts based on their origin, providing insights into stylistic characteristics.</p>
     </div>
     <div class="charts" id="chart4">
-      <!-- Google Chart will be rendered here -->
+      <img src="/static/images/len.png" alt="densityplotlength">
     </div>
   </div>
 
@@ -91,11 +91,11 @@
 
   <div class="eda_container">
     <div class="charts" id="chart5">
-      <!-- Google Chart will be rendered here -->
+        <img src="/static/images/lenbp.png" alt="densityplotlength">
     </div>
     <div class="chart_description">
-      <h3>TOP 25 Occuring words for Generated Text Unigram </h3>
-      <p>This bar chart illustrates the top 25 most frequently occurring words in a generated text unigram, with "student" being the most frequent, appearing nearly 50,000 times. Following closely are "car" and "make," each with frequencies above 30,000. Other common words include "help," "like," "also," "people," "school," and "time," each appearing between 20,000 to 30,000 times. Towards the lower end of the top 25, words such as "vote," "take," "usage," "use," "would," "limit," "way," and "lead" have frequencies closer to 10,000. The prevalence of these words suggests that topics related to students, activities, and various concepts are central to the generated text, providing insight into the main themes and focus areas within the content.</p>
+      <h3>BoxPlot of Length </h3>
+      <p>The boxplot provides a summary of the length distribution of texts in the dataset. The x-axis represents the length of the texts, while the y-axis shows the value range. The box represents the interquartile range (IQR) where the middle 50% of the data points lie, with the line inside the box indicating the median length. The whiskers extend to the smallest and largest values within 1.5 times the IQR from the lower and upper quartiles, respectively. Points outside this range are considered outliers. The boxplot shows that the majority of text lengths fall within a specific range, with a median length around 1000 characters. There are numerous outliers extending beyond 3000 characters, suggesting the presence of significantly longer texts in the dataset. This visualization provides a clear overview of the central tendency, variability, and potential outliers in text lengths.</p>
     </div>
   </div>
 
@@ -127,11 +127,23 @@
 
   <div class="eda_container">
     <div class="chart_description">
-      <h3>TOP 25 Occuring words for Generated Text Unigram </h3>
-      <p>This bar chart illustrates the top 25 most frequently occurring words in a generated text unigram, with "student" being the most frequent, appearing nearly 50,000 times. Following closely are "car" and "make," each with frequencies above 30,000. Other common words include "help," "like," "also," "people," "school," and "time," each appearing between 20,000 to 30,000 times. Towards the lower end of the top 25, words such as "vote," "take," "usage," "use," "would," "limit," "way," and "lead" have frequencies closer to 10,000. The prevalence of these words suggests that topics related to students, activities, and various concepts are central to the generated text, providing insight into the main themes and focus areas within the content.</p>
+      <h3>Density Plot of Mean Word Length </h3>
+      <p>The density plot of mean word length illustrates the distribution of average word lengths for human-written (0) and AI-generated (1) text samples. The x-axis represents the mean word length, while the y-axis shows the density. The plot reveals that both distributions are tightly clustered around a similar range, with the peak density occurring around 7-10 characters. The human-written texts (blue) exhibit a slightly narrower distribution compared to the AI-generated texts (orange). Both distributions taper off significantly beyond 20 characters, indicating that most words in both text types are relatively short, with a few outliers extending to higher word lengths.</p>
     </div>
     <div class="charts" id="chart8">
-      <!-- Google Chart will be rendered here -->
+        <img src="/static/images/mwl.png" alt="densityplotlength">
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="eda_container">
+    <div class="chart_description">
+      <h3>BoxPlot of Mean Word Length </h3>
+      <p>The boxplot of mean word length provides a summary of the central tendency and variability of average word lengths in the dataset, segmented by human-written (0) and AI-generated (1) texts. The x-axis represents the mean word length, and the y-axis indicates the value distribution. For both categories, the majority of the data falls within a similar interquartile range (IQR), which spans approximately from 7 to 10 characters. The whiskers extend slightly beyond this range, capturing the bulk of the data. However, there are noticeable outliers, particularly in the AI-generated texts, which show mean word lengths extending beyond 60 characters. This suggests that while most texts maintain a similar average word length, AI-generated texts occasionally produce longer words, resulting in these outliers.</p>
+    </div>
+    <div class="charts" id="chart8">
+        <img src="/static/images/mwlb.png" alt="densityplotlength">
     </div>
   </div>
 
@@ -143,11 +155,11 @@
 
   <div class="container22">
     <div class="box">
-        <img src="bigram_cloud_label_0.png" alt="Image 1">
+        <img src="/static/images/bigram_cloud_label_0.png" alt="Image 1">
         <div class="title"><h3>WordCloud of Human-written text</h3></div>
     </div>
     <div class="box">
-        <img src="bigram_cloud_label_1.png" alt="Image 2">
+        <img src="/static/images/bigram_cloud_label_1.png" alt="Image 2">
         <div class="title"><h3>WordCloud of Generated text</h3></div>
     </div>
 </div>
@@ -156,7 +168,7 @@
 
   <footer class="footer">
     <div class="footer-content">
-      <div class="footer-title">AI Content Detector</div>
+      <div class="footer-title">VeriTXT</div>
       <div class="footer-buttons">
         <button class="footer-button" name="model" onclick="window.location.href='/'">Test</button>
           <button class="footer-button" name="model" onclick="window.location.href='/'">Home</button>
@@ -169,7 +181,7 @@
       </div>
     </div>
     <div class="footer-copyright">
-      &copy; 2024 AI Content Detector. All rights reserved.
+      &copy; 2024 VeriTXT. All rights reserved.
     </div>
   </footer>
 </body>

@@ -33,6 +33,26 @@ body {
     width: 30%;
   }
 
+  .title-chart-container {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    align-items: center;
+    width: 100%;
+    }
+
+    #chyata{
+        text-align: left;
+    }
+
+    .title-chart-container h1 {
+    font-size: 200px;
+    text-align: left;
+    font-weight: bold;
+    margin: -30px 0;
+    padding-left: 40px;
+    }
+
   .center-title {
     text-align: center;
     margin: 20px 0;
@@ -42,31 +62,33 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 20px;
+    margin: 50px 20px;
 }
 .chart-container {
     width: 60%;
 }
 .table-container {
-    width: 35%;
+    width: 50%;
 }
 table {
     width: 100%;
+    height: 300px;
     border-collapse: collapse;
 }
 table, th, td {
     border: 1px solid black;
 }
+
 th, td {
     padding: 10px;
     text-align: center;
 }
+
 .metric-container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 20px 0;
-    width: 80%;
 }
 .metric-chart {
     width: 60%;
@@ -74,6 +96,12 @@ th, td {
 .metric-description {
     width: 35%;
     padding-left: 20px;
+    text-align: justify;
+}
+
+.metric-description p{
+    font-size: 17px;
+    line-height: 1.5;
 }
   .footer {
     background-color: black;
@@ -136,25 +164,10 @@ th, td {
     position: relative;
     overflow: hidden;
     color: white;
-    z-index: 1;
-  }
-  .footer-buttons input[type="submit"]::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    transform: translateX(-100%);
-    transition: all .3s;
-    z-index: -1;
-   }
-   .footer-buttons input[type="submit"]:hover::before {
-    transform: translateX(0);
   }
    .footer-buttons input[type="submit"]:hover {
     color: #000;
+    background-color: white;
     transition: 0.4s ease-in-out;
   }
   .footer-copyright {
