@@ -32,18 +32,6 @@ body {
     background-color: black;
     color: white;
   }
-  .navbar .test-button {
-    background-color: rgb(33, 33, 33);
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    cursor: pointer;
-    border-radius: 2px;
-    font-size: 16px;
-  }
-  .navbar .test-button:hover {
-    background-color: black;
-  }
 
   .container {
     position: relative;

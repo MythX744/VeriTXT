@@ -8,12 +8,16 @@
 </head>
 <body>
   <nav class="navbar">
-    <div class="nav-links">
-      <a href="/">Home</a>
-      <a href="/EDA">EDA</a>
-      <a href="/Metrics">Metrics</a>
-    </div>
-  </nav>
+        <div class="nav-links">
+                <input type="submit" name="model" value="Home">
+            <form action="/EDA" method="post">
+                <input type="submit" name="model" value="EDA">
+            </form>
+            <form action="/Metrics" method="post">
+                <input type="submit" name="model" value="Metrics">
+            </form>
+        </div>
+    </nav>
 
   <div class="def_container">
     <div class="def_title">
@@ -149,10 +153,16 @@
     <div class="footer-content">
       <div class="footer-title">AI Content Detector</div>
       <div class="footer-buttons">
-        <button class="footer-button" name="model" onclick="window.location.href='/'">Test</button>
-        <button class="footer-button" name="model" onclick="window.location.href='/'">Home</button>
-        <button class="footer-button" name="model" onclick="window.location.href='/new_eda'">EDA</button>
-        <button class="footer-button" name="model" onclick="window.location.href='/metrics'">Metrics</button>
+        <button class="footer-button" onclick="scrollToTestSection()">Test</button>
+            <form action="/" method="post">
+                <input type="submit" name="model" class="footer-button" value="Home">
+            </form>
+            <form action="/EDA" method="post">
+                <input type="submit" name="model" class="footer-button" value="EDA">
+            </form>
+            <form action="/Metrics" method="post">
+                <input type="submit" name="model" class="footer-button" value="Metrics">
+            </form>
       </div>
     </div>
     <div class="footer-copyright">
