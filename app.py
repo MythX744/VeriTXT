@@ -141,6 +141,7 @@ def index():
 def predict_text():
     try:
         text = request.form['text']
+        print(len(text))
 
         # Check if the text is empty
         if not text.strip():
@@ -149,8 +150,13 @@ def predict_text():
 
         # Limit the length of the text
         max_length = 500  # You can adjust the limit as needed
+        min_length = 15
         if len(text) > max_length:
             error_message = f"Text is too long. Please limit your input to {max_length} characters."
+            return render_template('new_home.html', error=error_message, input_text=text)
+
+        if min_length > len(text):
+            error_message = f"Text is too short. Please enter at least {min_length} characters."
             return render_template('new_home.html', error=error_message, input_text=text)
 
         model = request.form['model']
