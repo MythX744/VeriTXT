@@ -9,14 +9,12 @@
 <body>
     <nav class="navbar">
         <div class="nav-links">
-            <form action="" method="post">
-                <input type="submit" value="Home">
+                <input type="submit" name="model" value="Home">
+            <form action="/EDA" method="post">
+                <input type="submit" name="model" value="EDA">
             </form>
-            <form action="" method="post">
-                <input type="submit" value="EDA">
-            </form>
-            <form action="" method="post">
-                <input type="submit" value="Metrics">
+            <form action="/Metrics" method="post">
+                <input type="submit" name="model" value="Metrics">
             </form>
         </div>
     </nav>
@@ -59,8 +57,8 @@
             <h3>Let's compare between the 3 models we used</h3>
             <p>metric para</p>
             <p>paragraph for metric</p>
-        <form action="" method="post">
-            <input type="submit" value="Learn more">
+        <form action="/Metrics" method="post">
+            <input type="submit" name="model" value="Learn more">
         </form>
         </div>
         <div id="chart_div" class="chart"></div>
@@ -99,14 +97,14 @@
             <div class="footer-title">AI Content Detector</div>
             <div class="footer-buttons">
                 <button class="footer-button" onclick="scrollToTestSection()">Test</button>
-            <form action="" method="post">
-                <input type="submit" class="footer-button" value="Home"></input>
+            <form action="/" method="post">
+                <input type="submit" name="model" class="footer-button" value="Home">
             </form>
-            <form action="" method="post">
-                <input type="submit" class="footer-button" value="EDA"></input>
+            <form action="/EDA" method="post">
+                <input type="submit" name="model" class="footer-button" value="EDA">
             </form>
-            <form action="" method="post">
-                <input type="submit" class="footer-button" value="Metrics"></input>
+            <form action="/Metrics" method="post">
+                <input type="submit" name="model" class="footer-button" value="Metrics">
             </form>
             </div>
         </div>

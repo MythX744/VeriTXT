@@ -30,5 +30,13 @@
         <h2>Results:</h2>
         <p>{{ prediction }}</p>
     </div>
+<h1>Topic Modeling with LDA</h1>
+    <h2>Topics</h2>
+    <ul>
+        {% for topic_id, words in topics.items() %}
+            <li><strong>Topic {{ topic_id }} - {{ topic_names[topic_id] }}:</strong> {{ words }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('lda_vis') }}">View LDA Visualization</a>
 </body>
 </html>

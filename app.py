@@ -145,7 +145,7 @@ def EDA():
     try:
         model = request.form['model']
         if model == 'EDA':
-            return render_template('eda.html')
+            return render_template('new_eda.html')
     except Exception as e:
         print(e)
         return str(e), 500
@@ -183,7 +183,7 @@ def metrics():
             print(f"F1 Score: {f1_nn}")
             print(f"Recall: {recall_nn}")
             print(f"Precision: {precision_nn}")
-            return render_template('metrics.html', accuracy_lr=accuracy_lr, f1_lr=f1_lr, recall_lr=recall_lr,
+            return render_template('new_metrics.html', accuracy_lr=accuracy_lr, f1_lr=f1_lr, recall_lr=recall_lr,
                                    precision_lr=precision_lr, accuracy_nb=accuracy_nb, f1_nb=f1_nb, recall_nb=recall_nb,
                                    precision_nb=precision_nb, accuracy_nn=accuracy_nn, f1_nn=f1_nn, recall_nn=recall_nn,
                                    precision_nn=precision_nn)

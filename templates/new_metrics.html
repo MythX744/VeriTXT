@@ -9,9 +9,9 @@
 <body>
   <nav class="navbar">
     <div class="nav-links">
-      <a href="/templates/new_home.html">Home</a>
-      <a href="/templates/new_eda.html">EDA</a>
-      <a href="/templates/metrics.html">Metrics</a>
+      <a href="/">Home</a>
+      <a href="/EDA">EDA</a>
+      <a href="/Metrics">Metrics</a>
     </div>
   </nav>
 
@@ -30,24 +30,24 @@
                 </tr>
                 <tr>
                     <td>Logistic Regression</td>
-                    <td>98.58%</td>
-                    <td>98.46%</td>
-                    <td>98.13%</td>
-                    <td>98.80%</td>
+                    <td>{{ accuracy_lr }}</td>
+                    <td>{{ f1_lr }}</td>
+                    <td>{{ recall_lr }}</td>
+                    <td>{{ precision_lr }}</td>
                 </tr>
                 <tr>
                     <td>Naive Bayes</td>
-                    <td>95.63%</td>
-                    <td>95.22%</td>
-                    <td>94.01%</td>
-                    <td>96.47%</td>
+                    <td>{{ accuracy_nb }}</td>
+                    <td>{{ f1_nb }}</td>
+                    <td>{{ recall_nb }}</td>
+                    <td>{{ precision_nb }}</td>
                 </tr>
                 <tr>
                     <td>Neural Network</td>
-                    <td>96.10%</td>
-                    <td>95.76%</td>
-                    <td>94.83%</td>
-                    <td>96.70%</td>
+                    <<td>{{ accuracy_nn }}</td>
+                    <td>{{ f1_nn }}</td>
+                    <td>{{ recall_nn }}</td>
+                    <td>{{ precision_nn }}</td>
                 </tr>
             </table>
         </div>
@@ -98,10 +98,10 @@
     <div class="footer-content">
       <div class="footer-title">AI Content Detector</div>
       <div class="footer-buttons">
-        <button class="footer-button" onclick="window.location.href='/templates/new_home.html#testt'">Test</button>
-        <button class="footer-button" onclick="window.location.href='/templates/new_home.html'">Home</button>
-        <button class="footer-button" onclick="window.location.href='/templates/new_eda.html'">EDA</button>
-        <button class="footer-button" onclick="window.location.href='/templates/new_metrics.html'">Metrics</button>
+        <button class="footer-button" name="model" onclick="window.location.href='/'">Test</button>
+        <button class="footer-button" name="model" onclick="window.location.href='/'">Home</button>
+        <button class="footer-button" name="model" onclick="window.location.href='/new_eda'">EDA</button>
+        <button class="footer-button" name="model" onclick="window.location.href='/metrics'">Metrics</button>
       </div>
     </div>
     <div class="footer-copyright">
