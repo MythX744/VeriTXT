@@ -9,7 +9,9 @@
 <body>
   <nav class="navbar">
         <div class="nav-links">
+            <form action="/">
                 <input type="submit" name="model" value="Home">
+            </form>
             <form action="/EDA" method="post">
                 <input type="submit" name="model" value="EDA">
             </form>
@@ -153,10 +155,8 @@
     <div class="footer-content">
       <div class="footer-title">AI Content Detector</div>
       <div class="footer-buttons">
-        <button class="footer-button" onclick="scrollToTestSection()">Test</button>
-            <form action="/" method="post">
-                <input type="submit" name="model" class="footer-button" value="Home">
-            </form>
+        <button class="footer-button" name="model" onclick="window.location.href='/'">Test</button>
+          <button class="footer-button" name="model" onclick="window.location.href='/'">Home</button>
             <form action="/EDA" method="post">
                 <input type="submit" name="model" class="footer-button" value="EDA">
             </form>
