@@ -73,3 +73,4 @@ wrapt~=1.15.0
 astunparse~=1.6.3
 tensorboard~=2.16.2
 scipy==1.10.1
+pyLDAvis~=3.4.1

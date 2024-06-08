@@ -1,4 +1,7 @@
+import pickle
 import sys
+import pyLDAvis
+import pyLDAvis.gensim
 from flask import Flask, render_template, request
 import joblib
 import re
@@ -103,6 +106,31 @@ def predictNN(text):
         raise Exception(error_message)  # Rethrow with the original message
 
 
+# Load the LDA model and associated data
+with open('pickle_file/lda_model.pkl', 'rb') as f:
+    lda_model = pickle.load(f)
+
+with open('pickle_file/dictionary.pkl', 'rb') as f:
+    dictionary = pickle.load(f)
+
+with open('pickle_file/corpus.pkl', 'rb') as f:
+    corpus = pickle.load(f)
+
+with open('pickle_file/topic_names.pkl', 'rb') as f:
+    topic_names = pickle.load(f)
+
+with open('pickle_file/lda_vis.pkl', 'rb') as f:
+    vis_data = pickle.load(f)
+
+# Extract the top words for each topic
+topics = lda_model.show_topics(formatted=False)
+topics_words = {i: [word for word, prob in topic] for i, topic in topics}
+
+
+@app.route('/LDA', methods=['Post'])
+def show_lda_vis():
+    return render_template('lda_vis.html', vis_data=vis_data)
+
 # Flask routes
 @app.route('/')
 def index():
@@ -190,6 +218,7 @@ def metrics():
     except Exception as e:
         print(e)
         return str(e), 500
+
 
 
 if __name__ == '__main__':
