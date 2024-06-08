@@ -38,9 +38,9 @@
                 <form action='/predict' method="post">
                     <textarea placeholder="Test your prompt here" name="text">{{ input_text if input_text else '' }}</textarea>
                     <div class="button-group">
-                        <input type="submit" name="model" value="Naive Bayes">
-                        <input type="submit" name="model" value="Logistic Regression">
-                        <input type="submit" name="model" value="Neural Networks">
+                        <input type="submit" name="model" id="nb" value="Naive Bayes">
+                        <input type="submit" name="model" id="nb" value="Logistic Regression">
+                        <input type="submit" name="model" id="nb" value="Neural Networks">
                     </div>
                 </form>
             </div>
@@ -58,8 +58,7 @@
         <div class="intro">
             <h1>Model Metrics</h1>
             <h3>Let's compare between the 3 models we used</h3>
-            <p>metric para</p>
-            <p>paragraph for metric</p>
+            <p>Based on the chart, the <b>Logistic Regression</b> model appears to be the best among the three models evaluated. It has the highest accuracy at <b>98.58%</b>, indicating that it correctly classifies the most instances out of all the models. Furthermore, its F1 score of <b>98.46%</b> shows a strong balance between precision and recall, making it reliable for both identifying true positives and minimizing false positives. With a recall of <b>98.13%</b>, it effectively identifies the majority of actual positive cases, while its precision of <b>98.80%</b> highlights its capability in ensuring that positive predictions are accurate. Compared to the Naive Bayes and Neural Network models, which have lower accuracy, F1, recall, and precision scores, the Logistic Regression model consistently outperforms in all key metrics, making it the most robust and dependable model for this dataset.</p>
         <form action="/Metrics" method="post">
                 <input type="submit" name="model" value="Metrics">
         </form>
@@ -99,7 +98,7 @@
 
     <footer class="footer">
         <div class="footer-content">
-            <div class="footer-title">AI Content Detector</div>
+            <div class="footer-title">VeriTXT</div>
             <div class="footer-buttons">
                 <button class="footer-button" onclick="scrollToTestSection()">Test</button>
                 <input type="submit" name="model" class="footer-button" value="Home">
@@ -112,7 +111,7 @@
             </div>
         </div>
         <div class="footer-copyright">
-            &copy; 2024 AI Content Detector. All rights reserved.
+            &copy; 2024 VeriTXT. All rights reserved.
         </div>
     </footer>
 </body>
