@@ -1,10 +1,480 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/css/new_eda.css">
+  <title>AI Content Detector</title>
 </head>
 <body>
+  <nav class="navbar">
+    <div class="nav-links">
+      <a href="/templates/new_home.html">Home</a>
+      <a href="/templates/new_eda.html">EDA</a>
+      <a href="/templates/metrics.html">Metrics</a>
+    </div>
+  </nav>
 
+  <div class="def_container">
+    <div class="def_title">
+      <div>Exploratory</div>
+      <div>Data</div>
+      <div>Analysis</div>
+    </div>
+    <div class="definition">
+      <div id="scatter_plot" style="width: 100%; height: 400px;"></div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div id="little_title">
+    <h1>EDA Charts:</h1>
+  </div>
+
+  <div class="eda_container">
+    <div class="charts" id="chart1">
+      <!-- Google Chart will be rendered here -->
+    </div>
+    <div class="chart_description">
+      <h3>AI generated vs Human content distribution</h3>
+      <p>The bar chart displayed on the right illustrates the distribution of texts within our dataset, categorized based on their origin—either human-written or AI-generated. The x-axis represents these two categories, where '0' signifies human-written text and '1' indicates AI-generated text. The y-axis denotes the count of texts in each category. From the graph, it is evident that human-written texts (category '0') significantly outnumber the AI-generated texts (category '1'). This disparity highlights the prevalence of human-written content in our dataset, providing a substantial basis for comparative analysis in our exploratory data analysis (EDA).</p>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="eda_container">
+    <div class="charts" id="chart2">
+      <!-- Google Chart will be rendered here -->
+    </div>
+    <div class="chart_description">
+      <h3>TOP 25 Occuring words for Generated Text Unigram </h3>
+      <p>This bar chart illustrates the top 25 most frequently occurring words in a generated text unigram, with "student" being the most frequent, appearing nearly 50,000 times. Following closely are "car" and "make," each with frequencies above 30,000. Other common words include "help," "like," "also," "people," "school," and "time," each appearing between 20,000 to 30,000 times. Towards the lower end of the top 25, words such as "vote," "take," "usage," "use," "would," "limit," "way," and "lead" have frequencies closer to 10,000. The prevalence of these words suggests that topics related to students, activities, and various concepts are central to the generated text, providing insight into the main themes and focus areas within the content.</p>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="eda_container">
+    <div class="chart_description">
+      <h3>TOP 25 Occuring words for Human Text Unigram </h3>
+      <p>TThis bar chart showcases the top 25 most frequently occurring words in a human text unigram. The word "student" is the most frequent, appearing nearly 100,000 times. It is followed by "car" and "would," each with frequencies exceeding 60,000. Towards the lower end of the top 25, words like "phone," "one," "like," "state," "drive," "take," "many," "teacher," "work," and "electoral" have frequencies around 20,000 to 30,000. This frequency distribution indicates that themes related to students, activities, and general actions or concepts are prominent in the human-generated text, providing a clear insight into the primary focus areas within the content.</p>
+    </div>
+    <div class="charts" id="chart3">
+      <!-- Google Chart will be rendered here -->
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="eda_container">
+    <div class="chart_description">
+      <h3>TOP 25 Occuring words for Generated Text Unigram </h3>
+      <p>This bar chart illustrates the top 25 most frequently occurring words in a generated text unigram, with "student" being the most frequent, appearing nearly 50,000 times. Following closely are "car" and "make," each with frequencies above 30,000. Other common words include "help," "like," "also," "people," "school," and "time," each appearing between 20,000 to 30,000 times. Towards the lower end of the top 25, words such as "vote," "take," "usage," "use," "would," "limit," "way," and "lead" have frequencies closer to 10,000. The prevalence of these words suggests that topics related to students, activities, and various concepts are central to the generated text, providing insight into the main themes and focus areas within the content.</p>
+    </div>
+    <div class="charts" id="chart4">
+      <!-- Google Chart will be rendered here -->
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="eda_container">
+    <div class="charts" id="chart5">
+      <!-- Google Chart will be rendered here -->
+    </div>
+    <div class="chart_description">
+      <h3>TOP 25 Occuring words for Generated Text Unigram </h3>
+      <p>This bar chart illustrates the top 25 most frequently occurring words in a generated text unigram, with "student" being the most frequent, appearing nearly 50,000 times. Following closely are "car" and "make," each with frequencies above 30,000. Other common words include "help," "like," "also," "people," "school," and "time," each appearing between 20,000 to 30,000 times. Towards the lower end of the top 25, words such as "vote," "take," "usage," "use," "would," "limit," "way," and "lead" have frequencies closer to 10,000. The prevalence of these words suggests that topics related to students, activities, and various concepts are central to the generated text, providing insight into the main themes and focus areas within the content.</p>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="eda_container">
+    <div class="charts" id="chart6">
+      <!-- Google Chart will be rendered here -->
+    </div>
+    <div class="chart_description">
+      <h3>Top 25 Occurring Words for Generated Text Bigram </h3>
+      <p>The bar chart visually represents the frequency of the 25 most common bigrams identified in generated text. The chart highlights "Electoral College" as the most frequent bigram, appearing approximately 15,000 times, followed by "Car Usage" and "Limit Car" with 14,000 and 13,000 occurrences respectively. Other notable bigrams include "Popular Vote," "High School," and "Traffic Congestion." This visual representation effectively showcases the prominence of specific terms in the dataset, providing insight into recurring themes and topics within the generated text.</p>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="eda_container">
+    <div class="chart_description">
+      <h3>TOP 25 Occuring words for Human Text Bigram </h3>
+      <p>The horizontal bar chart titled “Top 25 Most Frequently Occurring Words for Human Text Bigram” visually represents the relationships between two-word phrases (bigrams) based on their frequency of occurrence. Notable bigrams include “electoral college,” “cell phone,” “driverless car,” and “summer project.” This chart provides insights into common themes or topics discussed within the human written corpus by highlighting frequently co-occurring word pairs.</p>
+    </div>
+    <div class="charts" id="chart7">
+      <!-- Google Chart will be rendered here -->
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="eda_container">
+    <div class="chart_description">
+      <h3>TOP 25 Occuring words for Generated Text Unigram </h3>
+      <p>This bar chart illustrates the top 25 most frequently occurring words in a generated text unigram, with "student" being the most frequent, appearing nearly 50,000 times. Following closely are "car" and "make," each with frequencies above 30,000. Other common words include "help," "like," "also," "people," "school," and "time," each appearing between 20,000 to 30,000 times. Towards the lower end of the top 25, words such as "vote," "take," "usage," "use," "would," "limit," "way," and "lead" have frequencies closer to 10,000. The prevalence of these words suggests that topics related to students, activities, and various concepts are central to the generated text, providing insight into the main themes and focus areas within the content.</p>
+    </div>
+    <div class="charts" id="chart8">
+      <!-- Google Chart will be rendered here -->
+    </div>
+  </div>
+
+  <hr>
+
+  <div id="little_title">
+    <h1>Word Clouds of Bigrams</h1>
+  </div>
+
+  <div class="container22">
+    <div class="box">
+        <img src="bigram_cloud_label_0.png" alt="Image 1">
+        <div class="title"><h3>WordCloud of Human-written text</h3></div>
+    </div>
+    <div class="box">
+        <img src="bigram_cloud_label_1.png" alt="Image 2">
+        <div class="title"><h3>WordCloud of Generated text</h3></div>
+    </div>
+</div>
+
+
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-title">AI Content Detector</div>
+      <div class="footer-buttons">
+        <button class="footer-button" onclick="window.location.href='/templates/new_home.html#testt'">Test</button>
+        <button class="footer-button" onclick="window.location.href='/templates/new_home.html'">Home</button>
+        <button class="footer-button" onclick="window.location.href='/templates/new_eda.html'">EDA</button>
+        <button class="footer-button" onclick="window.location.href='/templates/new_metrics.html'">Metrics</button>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      &copy; 2024 AI Content Detector. All rights reserved.
+    </div>
+  </footer>
 </body>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  var data;
+  var chart;
+  var options;
+  var index = 0;
+  var interval;
+
+  function drawChart() {
+    data = google.visualization.arrayToDataTable([
+      ['X', 'Y', { role: 'style' }],
+      [8, 12, '#ea5925'],
+      [4, 5.5, '#ea5925'],
+      [11, 14, '#ea5925'],
+      [4, 5, '#ea5925'],
+      [3, 3.5, '#ea5925'],
+      [6.5, 7, '#ea5925'],
+      [9, 10, '#ea5925'],
+      [2, 3, '#ea5925'],
+      [12, 15, '#ea5925'],
+      [5, 6, '#ea5925'],
+      [7, 8.5, '#ea5925'],
+      [10, 11.5, '#ea5925'],
+      [7.5, 9.5, '#ea5925'], // New data point with red color
+      [5.5, 6.8, '#ea5925'], // New data point with red color
+      [11.5, 12.8, '#ea5925'] // New data point with red color
+    ]);
+
+    options = {
+      hAxis: {title: ''},
+      vAxis: {title: ''},
+      legend: 'none',
+      animation: {
+        startup: true,
+        duration: 1000,
+        easing: 'inAndOut'
+      }
+    };
+
+    chart = new google.visualization.ScatterChart(document.getElementById('scatter_plot'));
+
+    chart.draw(data, options);
+
+    // Start the animation loop
+    interval = setInterval(updateChart, 2000);
+  }
+
+  function updateChart() {
+    // Generate new data
+    for (var i = 0; i < data.getNumberOfRows(); i++) {
+      data.setValue(i, 1, Math.random() * 15); // Random Y values
+    }
+
+    // Redraw the chart with new data
+    chart.draw(data, options);
+  }
+
+  function stopAnimation() {
+    clearInterval(interval);
+  }
+</script>
+
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart', 'bar']});
+
+  google.charts.setOnLoadCallback(drawCharts);
+  google.charts.setOnLoadCallback(drawMainChart);
+
+  function drawCharts() {
+    var data = google.visualization.arrayToDataTable([
+      ['type', 'units'],
+      ['Generated', 17497],
+      ['Human', 20548]
+    ]);
+
+    var options = {
+      pieHole: 0.4,
+      colors: ['#000', '#ea5925'],
+      backgroundColor: '#FFF',
+      chartArea: {
+            width: '100%',
+            height: '85%'
+        },
+    };
+
+
+    var chartElement = document.getElementById('chart1');
+    var chart = new google.visualization.PieChart(chartElement);
+    chart.draw(data, options);
+
+  }
+
+</script>
+
+<script type="text/javascript">
+  google.charts.load('current', {packages: ['corechart', 'bar']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Word', 'Frequency'],
+      ['student', 50000],
+      ['car', 30000],
+      ['make', 26500],
+      ['help', 26000],
+      ['like', 25000],
+      ['also', 24000],
+      ['people', 24000],
+      ['school', 23000],
+      ['time', 18600],
+      ['may', 18600],
+      ['work', 18000],
+      ['learn', 18000],
+      ['electoral', 17500],
+      ['college', 17000],
+      ['state', 17000],
+      ['important', 16000],
+      ['one', 16000],
+      ['vote', 14000],
+      ['take', 14000],
+      ['usage', 12800],
+      ['use', 12500],
+      ['would', 12000],
+      ['limit', 12000],
+      ['way', 12000],
+      ['lead', 12000]
+    ]);
+
+    var options = {
+      chartArea: {
+        width: '65%',
+        height: '90%'
+      },
+      hAxis: {
+        title: 'Frequency',
+        minValue: 0
+      },
+      vAxis: {
+        title: 'Word'
+      },
+      bars: 'horizontal',
+      colors: ['#ea5925']
+    };
+
+    var chart = new google.visualization.BarChart(document.getElementById('chart2'));
+    chart.draw(data, options);
+  }
+</script>
+
+<script type="text/javascript">
+  google.charts.load('current', {packages: ['corechart', 'bar']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Word', 'Frequency'],
+      ['student', 96000],
+      ['car', 72000],
+      ['would', 61000],
+      ['people', 52000],
+      ['school', 49000],
+      ['get', 42000],
+      ['make', 36000],
+      ['vote', 35000],
+      ['time', 33000],
+      ['could', 33000],
+      ['use', 33000],
+      ['project', 31000],
+      ['go', 31000],
+      ['help', 30000],
+      ['also', 29000],
+      ['phone', 27000],
+      ['one', 26000],
+      ['like', 26000],
+      ['state', 25000],
+      ['drive', 25000],
+      ['take', 23000],
+      ['many', 22000],
+      ['teacher', 22000],
+      ['work', 22000],
+      ['electoral', 21000]
+    ]);
+
+    var options = {
+      chartArea: {
+        width: '65%',
+        height: '90%'
+      },
+      hAxis: {
+        title: 'Frequency',
+        minValue: 0
+      },
+      vAxis: {
+        title: 'Word'
+      },
+      bars: 'horizontal',
+      colors: ['#ea5925']
+    };
+
+    var chart = new google.visualization.BarChart(document.getElementById('chart3'));
+    chart.draw(data, options);
+  }
+</script>
+
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Word', 'Frequency'],
+      ['Electoral College', 15000],
+      ['Car Usage', 14000],
+      ['Limit Car', 12000],
+      ['Popular Vote', 7800],
+      ['High School', 3900],
+      ['Traffic Congestion', 3700],
+      ['United State', 3400],
+      ['Student May', 3400],
+      ['Positive Attitude', 3300],
+      ['Public Transportation', 3200],
+      ['Cell Phone', 3200],
+      ['Help Reduce', 3100],
+      ['Help U', 3000],
+      ['Greenhouse Gas', 2900],
+      ['Extracurricular Activity', 2750],
+      ['Air Pollution', 2700],
+      ['Driverless Car', 2650],
+      ['Electoral Vote', 2600],
+      ['Advantage Limit', 2500],
+      ['Gas Emission', 2460],
+      ['Achieve Goal', 2450],
+      ['Elect President', 2400],
+      ['Help Student', 2300],
+      ['Climate Change', 2200],
+      ['Air Quality', 2100]
+    ]);
+
+    var options = {
+      hAxis: {
+        title: 'Frequency',
+        minValue: 0,
+        maxValue: 16000
+      },
+      vAxis: {
+        title: 'Word'
+      },
+      chartArea: {
+        width: '65%',
+        height: '90%'},
+      colors: ['#ea5925']
+    };
+
+    var chart = new google.visualization.BarChart(document.getElementById('chart6'));
+    chart.draw(data, options);
+  }
+</script>
+
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Bigram', 'Frequency'],
+      ['Electoral College', 18500],
+      ['Cell Phone', 11200],
+      ['Driverless Car', 10300],
+      ['Summer Project', 8200],
+      ['Extracurricular Activity', 8000],
+      ['Popular Vote', 6100],
+      ['Car Usage', 5700],
+      ['Student Would', 4700],
+      ['Limit Car', 4500],
+      ['United State', 4300],
+      ['Use Phone', 4000],
+      ['Many People', 3700],
+      ['Help Student', 3500],
+      ['Vote President', 3400],
+      ['Design Project', 3400],
+      ['Electoral Vote', 3200],
+      ['Seagoing Cowboy', 3200],
+      ['Use Car', 3000],
+      ['Online Class', 2750],
+      ['Phone Drive', 2650],
+      ['Allow Student', 2600],
+      ['Use Cell', 2600],
+      ['Free Time', 2550],
+      ['Student Learn', 2550],
+      ['Student Design', 2500]
+    ]);
+
+    var options = {
+      hAxis: {
+        title: 'Frequency',
+        minValue: 0
+      },
+      vAxis: {
+        title: 'Bigram'
+      },
+      chartArea: {
+        width: '65%',
+        height: '90%'},
+      colors: ['#ea5925'],
+      bars: 'horizontal'
+    };
+
+    var chart = new google.visualization.BarChart(document.getElementById('chart7'));
+    chart.draw(data, options);
+  }
+</script>
+
 </html>

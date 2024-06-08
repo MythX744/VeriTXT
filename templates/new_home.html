@@ -3,14 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/css/new_home.css">
+    <link rel="stylesheet" href="hh.CSS">
     <title>AI Content Detector</title>
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-links">
-            <a href="new_home.html">Home</a>
-            <a href="new_eda.html">EDA</a>
+            <form action="" method="post">
+                <input type="submit" value="Home"></input>
+            </form>
+            <form action="" method="post">
+                <input type="submit" value="EDA"></input>
+            </form>
+            <form action="" method="post">
+                <input type="submit" value="Metrics"></input>
+            </form>
         </div>
     </nav>
 
@@ -52,6 +59,9 @@
             <h3>Let's compare between the 3 models we used</h3>
             <p>metric para</p>
             <p>paragraph for metric</p>
+        <form action="" method="post">
+            <input type="submit" value="Learn more">
+        </form>
         </div>
         <div id="chart_div" class="chart"></div>
     </div>
@@ -89,8 +99,15 @@
             <div class="footer-title">AI Content Detector</div>
             <div class="footer-buttons">
                 <button class="footer-button" onclick="scrollToTestSection()">Test</button>
-                <button class="footer-button" onclick="window.location.href='home.html'">Home</button>
-                <button class="footer-button" onclick="window.location.href='eda.html'">EDA</button>
+            <form action="" method="post">
+                <input type="submit" class="footer-button" value="Home"></input>
+            </form>
+            <form action="" method="post">
+                <input type="submit" class="footer-button" value="EDA"></input>
+            </form>
+            <form action="" method="post">
+                <input type="submit" class="footer-button" value="Metrics"></input>
+            </form>
             </div>
         </div>
         <div class="footer-copyright">
@@ -115,7 +132,7 @@
 
         var options = {
             pieHole: 0.4,
-            colors: ['#FF00FF', '#0000FF'],
+            colors: ['#000', '#ea5925'],
             backgroundColor: '#FFF',
             chartArea: {
                 width: '100%',
@@ -130,37 +147,38 @@
 
     function drawMainChart() {
         var data = google.visualization.arrayToDataTable([
-            ['Model', 'Precision', 'Recall', 'Accuracy', 'F1 Score'],
-            ['Logistic Regression', Math.random() * 100, Math.random() * 100, Math.random() * 100, Math.random() * 100],
-            ['Neural Networks', Math.random() * 100, Math.random() * 100, Math.random() * 100, Math.random() * 100],
-            ['Naive Bayes', Math.random() * 100, Math.random() * 100, Math.random() * 100, Math.random() * 100]
-        ]);
+    ['Model', 'Precision', 'Recall', 'Accuracy', 'F1 Score'],
+    ['Logistic Regression', 98.58, 98.46, 98.13, 98.80],
+    ['Neural Networks', 96.10, 95.76, 94.83, 96.70],
+    ['Naive Bayes', 95.63, 95.22, 94.01, 96.47]
+]);
 
-        var options = {
-            title: 'Model Metrics',
-            chartArea: {
-                width: '50%',
-            },
-            backgroundColor: '#F6F6F6',
-            hAxis: {
-                title: 'Metrics',
-                minValue: 0
-            },
-            vAxis: {
-                title: 'Model'
-            },
-            legend: { position: 'top', maxLines: 3 },
-            bar: { groupWidth: '75%' },
-            colors: ['#FF00FF', '#000000', '#CCCCCC', '#0000FF'], // White, Black, Light Gray, Blue
-            animation: {
-                startup: true,
-                duration: 1000,
-                easing: 'in'
-            }
-        };
+var options = {
+    title: 'Model Metrics',
+    chartArea: {
+        width: '50%',
+    },
+    backgroundColor: '#F6F6F6',
+    hAxis: {
+        title: 'Metrics',
+        minValue: 85
+    },
+    vAxis: {
+        title: 'Model'
+    },
+    legend: { position: 'top', maxLines: 3 },
+    bar: { groupWidth: '75%' },
+    colors: ['#ee7b49', '#ea5925', '#b62f18', '#3f0e0b'], // White, Black, Light Gray, Blue
+    animation: {
+        startup: true,
+        duration: 1000,
+        easing: 'in'
+    }
+};
 
-        var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
+var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+chart.draw(data, options);
+
     }
 </script>
 
@@ -218,7 +236,7 @@
                 title: 'Word'
             },
             bars: 'horizontal',
-            colors: ['#1f77b4']
+            colors: ['#ea5925']
         };
 
         var chart = new google.visualization.BarChart(document.getElementById('chart2'));

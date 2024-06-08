@@ -25,68 +25,52 @@ body {
     color: white;
   }
 
-  .def_container {
-    display: flex;
-  }
-
   hr{
     width: 30%;
   }
 
-  .def_title {
-    width: 35%;
-    font-size: 70px;
-    font-weight: bold;
-    line-height: 1.5;
-    color: black;
-    padding: 50px 20px;
-    padding-left: 50px;
-  }
-  .definition {
-    width: 65%;
-    padding: 20px 40px;
-  }
-
-  .eda_container {
-    display: flex;
-    justify-content: space-between;
-    padding: 40px 20px;
-    height: 400px;
-  }
-  .charts {
-    flex: 1;
-    width: 50%;
-  }
-  .chart_description {
-    flex: 1;
-    width: 50%;
-    font-size: 18px;
-    padding-right: 40px;
-    line-height: 1.3;
-    text-align: justify;
-  }
-
-  #little_title{
-    padding: 30px;
+  .center-title {
     text-align: center;
-  }
-
-  .container22 {
+    margin: 20px 0;
+}
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+.chart-container {
+    width: 60%;
+}
+.table-container {
+    width: 35%;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+.metric-container {
     display: flex;
     justify-content: center;
-    height: 100vh;
-  }
-  .box {
-      text-align: center;
-  }
-  .box img {
-      width: 70%;
-      margin: 0;
-  }
-  .title {
-      margin-top: 10px;
-  }
-
+    align-items: center;
+    margin: 20px 0;
+    width: 80%;
+}
+.metric-chart {
+    width: 60%;
+}
+.metric-description {
+    width: 35%;
+    padding-left: 20px;
+}
   .footer {
     background-color: black;
     padding: 20px 40px;

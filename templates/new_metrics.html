@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/css/new_metrics.css">
+  <title>AI Content Detector</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-links">
+      <a href="/templates/new_home.html">Home</a>
+      <a href="/templates/new_eda.html">EDA</a>
+      <a href="/templates/metrics.html">Metrics</a>
+    </div>
+  </nav>
+
+  <br>
+
+  <h1 class="center-title">Metrics</h1>
+    <div class="main-container">
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>Model</th>
+                    <th>Accuracy</th>
+                    <th>F1 Score</th>
+                    <th>Recall</th>
+                    <th>Precision</th>
+                </tr>
+                <tr>
+                    <td>Logistic Regression</td>
+                    <td>98.58%</td>
+                    <td>98.46%</td>
+                    <td>98.13%</td>
+                    <td>98.80%</td>
+                </tr>
+                <tr>
+                    <td>Naive Bayes</td>
+                    <td>95.63%</td>
+                    <td>95.22%</td>
+                    <td>94.01%</td>
+                    <td>96.47%</td>
+                </tr>
+                <tr>
+                    <td>Neural Network</td>
+                    <td>96.10%</td>
+                    <td>95.76%</td>
+                    <td>94.83%</td>
+                    <td>96.70%</td>
+                </tr>
+            </table>
+        </div>
+        <div id="main_chart_div" class="chart-container" style="width: 700px; height: 500px;"></div>
+    </div>
+
+    <hr>
+
+    <div class="metric-container">
+        <div id="accuracy_chart" class="metric-chart" style="width: 600px; height: 400px;"></div>
+        <div class="metric-description">
+            <h1>Accuracy</h1>
+            <p>The Logistic Regression model has the highest accuracy at 98.58%, followed by the Neural Network at 96.10%, and the Naive Bayes model at 95.63%.</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="metric-container">
+        <div id="f1_chart" class="metric-chart" style="width: 600px; height: 400px;"></div>
+        <div class="metric-description">
+            <h1>F1 Score</h1>
+            <p>The Logistic Regression model also leads in F1 score with 98.46%, while the Neural Network and Naive Bayes models have F1 scores of 95.76% and 95.22%, respectively.</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="metric-container">
+        <div id="recall_chart" class="metric-chart" style="width: 600px; height: 400px;"></div>
+        <div class="metric-description">
+            <h1>Recall</h1>
+            <p>In terms of recall, the Logistic Regression model is again the highest at 98.13%. The Neural Network and Naive Bayes models have recall scores of 94.83% and 94.01%, respectively.</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="metric-container">
+        <div id="precision_chart" class="metric-chart" style="width: 600px; height: 400px;"></div>
+        <div class="metric-description">
+            <h1>Precision</h1>
+            <p>Precision is highest in the Logistic Regression model at 98.80%, with the Neural Network at 96.70% and the Naive Bayes model at 96.47%.</p>
+        </div>
+    </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-title">AI Content Detector</div>
+      <div class="footer-buttons">
+        <button class="footer-button" onclick="window.location.href='/templates/new_home.html#testt'">Test</button>
+        <button class="footer-button" onclick="window.location.href='/templates/new_home.html'">Home</button>
+        <button class="footer-button" onclick="window.location.href='/templates/new_eda.html'">EDA</button>
+        <button class="footer-button" onclick="window.location.href='/templates/new_metrics.html'">Metrics</button>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      &copy; 2024 AI Content Detector. All rights reserved.
+    </div>
+  </footer>
+</body>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawCharts);
+
+    function drawCharts() {
+        drawMainChart();
+        drawAccuracyChart();
+        drawF1Chart();
+        drawRecallChart();
+        drawPrecisionChart();
+    }
+
+    function drawMainChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Model', 'Accuracy', 'F1 Score', 'Recall', 'Precision'],
+            ['Logistic Regression', 98.58, 98.46, 98.13, 98.80],
+            ['Naive Bayes', 95.63, 95.22, 94.01, 96.47],
+            ['Neural Network', 96.10, 95.76, 94.83, 96.70]
+        ]);
+
+        var options = {
+            title: 'Model Metrics Comparison',
+            hAxis: {title: 'Models'},
+            vAxis: {title: 'Percentage (%)'},
+            legend: { position: 'top', maxLines: 3 },
+            bar: { groupWidth: '75%' },
+            isStacked: false,
+            colors: ['#ee7b49', '#ea5925', '#b62f18', '#3f0e0b']
+        };
+
+        var chart = new google.visualization.BarChart(document.getElementById('main_chart_div'));
+        chart.draw(data, options);
+    }
+
+    function drawAccuracyChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Model', 'Accuracy'],
+            ['Logistic Regression', 98.58],
+            ['Naive Bayes', 95.63],
+            ['Neural Network', 96.10]
+        ]);
+
+        var options = {
+            title: 'Model Accuracy',
+            hAxis: {title: 'Models'},
+            vAxis: {title: 'Accuracy (%)'},
+            legend: { position: 'none' },
+            colors: ['#ea5925']
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('accuracy_chart'));
+        chart.draw(data, options);
+    }
+
+    function drawF1Chart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Model', 'F1 Score'],
+            ['Logistic Regression', 98.46],
+            ['Naive Bayes', 95.22],
+            ['Neural Network', 95.76]
+        ]);
+
+        var options = {
+            title: 'Model F1 Score',
+            hAxis: {title: 'Models'},
+            vAxis: {title: 'F1 Score (%)'},
+            legend: { position: 'none' },
+            colors: ['#ea5925']
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('f1_chart'));
+        chart.draw(data, options);
+    }
+
+    function drawRecallChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Model', 'Recall'],
+            ['Logistic Regression', 98.13],
+            ['Naive Bayes', 94.01],
+            ['Neural Network', 94.83]
+        ]);
+
+        var options = {
+            title: 'Model Recall',
+            hAxis: {title: 'Models'},
+            vAxis: {title: 'Recall (%)'},
+            legend: { position: 'none' },
+            colors: ['#ea5925']
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('recall_chart'));
+        chart.draw(data, options);
+    }
+
+    function drawPrecisionChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Model', 'Precision'],
+            ['Logistic Regression', 98.80],
+            ['Naive Bayes', 96.47],
+            ['Neural Network', 96.70]
+        ]);
+
+        var options = {
+            title: 'Model Precision',
+            hAxis: {title: 'Models'},
+            vAxis: {title: 'Precision (%)'},
+            legend: { position: 'none' },
+            colors: ['#ea5925']
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('precision_chart'));
+        chart.draw(data, options);
+    }
+</script>
+
+</html>
