@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="416c6dc7-20af-4956-917e-28250107258a" name="Changes" comment="App">
-      <change afterPath="$PROJECT_DIR$/static/css/new_metrics.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/new_metrics.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_2_2024_12_28_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_2_2024_12_28_AM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_3_2024_12_13_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_3_2024_12_13_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_7_2024_10_25_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_7_2024_10_25_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_7_2024_7_45_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_7_2024_7_45_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/new_eda.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/new_eda.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/new_eda.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/new_eda.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/new_home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/new_home.html" afterDir="false" />
-    </list>
+    <list default="true" id="416c6dc7-20af-4956-917e-28250107258a" name="Changes" comment="App" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -213,7 +202,7 @@
       <workItem from="1717632053763" duration="1235000" />
       <workItem from="1717785935181" duration="4519000" />
       <workItem from="1717796426747" duration="1842000" />
-      <workItem from="1717851589697" duration="3619000" />
+      <workItem from="1717851589697" duration="3964000" />
     </task>
     <task id="LOCAL-00001" summary="Neural Network">
       <option name="closed" value="true" />
@@ -287,7 +276,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717795025335</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="App">
+      <option name="closed" value="true" />
+      <created>1717857451597</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1717857451597</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,7 +307,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="App" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/VeriTXT$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1717855858939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/VeriTXT$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1717857702191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Project$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1717794970769" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Project$trained_model.coverage" NAME="trained_model Coverage Results" MODIFIED="1717413315949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Project$metrics.coverage" NAME="metrics Coverage Results" MODIFIED="1717369533060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
