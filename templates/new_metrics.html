@@ -38,34 +38,38 @@
         <div class="table-container">
             <h1 class="center-title">Table of Metrics Values</h1>
             <table>
-                <tr>
-                    <th>Model</th>
-                    <th>Accuracy</th>
-                    <th>F1 Score</th>
-                    <th>Recall</th>
-                    <th>Precision</th>
-                </tr>
-                <tr>
-                    <td>Logistic Regression</td>
-                    <td>{{ accuracy_lr }}</td>
-                    <td>{{ f1_lr }}</td>
-                    <td>{{ recall_lr }}</td>
-                    <td>{{ precision_lr }}</td>
-                </tr>
-                <tr>
-                    <td>Naive Bayes</td>
-                    <td>{{ accuracy_nb }}</td>
-                    <td>{{ f1_nb }}</td>
-                    <td>{{ recall_nb }}</td>
-                    <td>{{ precision_nb }}</td>
-                </tr>
-                <tr>
-                    <td>Neural Network</td>
-                    <td>{{ accuracy_nn }}</td>
-                    <td>{{ f1_nn }}</td>
-                    <td>{{ recall_nn }}</td>
-                    <td>{{ precision_nn }}</td>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>Model</th>
+                        <th>Accuracy</th>
+                        <th>F1 Score</th>
+                        <th>Recall</th>
+                        <th>Precision</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Logistic Regression</td>
+                        <td>{{ accuracy_lr }}</td>
+                        <td>{{ f1_lr }}</td>
+                        <td>{{ recall_lr }}</td>
+                        <td>{{ precision_lr }}</td>
+                    </tr>
+                    <tr>
+                        <td>Naive Bayes</td>
+                        <td>{{ accuracy_nb }}</td>
+                        <td>{{ f1_nb }}</td>
+                        <td>{{ recall_nb }}</td>
+                        <td>{{ precision_nb }}</td>
+                    </tr>
+                    <tr>
+                        <td>Neural Network</td>
+                        <td>{{ accuracy_nn }}</td>
+                        <td>{{ f1_nn }}</td>
+                        <td>{{ recall_nn }}</td>
+                        <td>{{ precision_nn }}</td>
+                    </tr>
+                </tbody>
             </table>
         </div>
     </div>
