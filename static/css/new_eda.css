@@ -2,13 +2,22 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
   }
+  .nav-sides {
+    height: 60px;
+    width: 110px;
+  }
+  .nav-sides img {
+    height: 60px;
+    width: auto;
+  }
   .navbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: white;
-    padding: 0 60px;
-    border-bottom: 1px solid #f0e0e0;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1000;
   }
   .navbar .nav-links {
     display: flex;
@@ -31,6 +40,7 @@ body {
 
   .def_container {
     display: flex;
+    margin: 50px 0 0 0;
   }
 
   hr{
@@ -44,7 +54,7 @@ body {
     line-height: 1.5;
     color: black;
     padding: 50px 20px;
-    padding-left: 50px;
+    padding-left: 120px;
   }
   .definition {
     width: 65%;
@@ -54,12 +64,15 @@ body {
   .eda_container {
     display: flex;
     justify-content: space-between;
-    padding: 40px 20px;
+    padding: 80px 100px;
     height: 400px;
   }
   .charts {
     flex: 1;
     width: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
   }
   .chart_description {
     flex: 1;
@@ -101,11 +114,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 20px;
+    padding: 20px;
   }
-  .footer-title {
-    font-size: 24px;
-    font-weight: bold;
+
+  .footer-content img {
+    width: 200px;
+    height: auto;
   }
   .footer-buttons {
     display: flex;

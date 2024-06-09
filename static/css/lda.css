@@ -1,8 +1,33 @@
 #lhrba{
     text-align: center;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
-.navbar{
-    border-bottom: 1px solid #e5e5e5;
+.nav-sides {
+    height: 60px;
+    width: 110px;
+}
+.nav-sides img {
+    height: 60px;
+    width: auto;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1000;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.footer-content img {
+    width: 200px;
+    height: auto;
 }

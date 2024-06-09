@@ -4,10 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/static/css/new_eda.css">
-  <title>AI Content Detector</title>
+  <title>EDA</title>
 </head>
 <body>
   <nav class="navbar">
+        <div class="nav-sides">
+            <img src="/static/images/logo%20VeriTXT.png" alt="logo" class="logo">
+        </div>
         <div class="nav-links">
             <form action="/">
                 <input type="submit" name="model" value="Home">
@@ -22,6 +25,7 @@
                 <input type="submit" name="model" value="LDA">
             </form>
         </div>
+        <div class="nav-sides"></div>
     </nav>
 
   <div class="def_container">
@@ -68,7 +72,7 @@
   <div class="eda_container">
     <div class="chart_description">
       <h3>TOP 25 Occuring words for Human Text Unigram </h3>
-      <p>TThis bar chart showcases the top 25 most frequently occurring words in a human text unigram. The word "student" is the most frequent, appearing nearly 100,000 times. It is followed by "car" and "would," each with frequencies exceeding 60,000. Towards the lower end of the top 25, words like "phone," "one," "like," "state," "drive," "take," "many," "teacher," "work," and "electoral" have frequencies around 20,000 to 30,000. This frequency distribution indicates that themes related to students, activities, and general actions or concepts are prominent in the human-generated text, providing a clear insight into the primary focus areas within the content.</p>
+      <p>This bar chart showcases the top 25 most frequently occurring words in a human text unigram. The word "student" is the most frequent, appearing nearly 100,000 times. It is followed by "car" and "would," each with frequencies exceeding 60,000. Towards the lower end of the top 25, words like "phone," "one," "like," "state," "drive," "take," "many," "teacher," "work," and "electoral" have frequencies around 20,000 to 30,000. This frequency distribution indicates that themes related to students, activities, and general actions or concepts are prominent in the human-generated text, providing a clear insight into the primary focus areas within the content.</p>
     </div>
     <div class="charts" id="chart3">
       <!-- Google Chart will be rendered here -->
@@ -168,7 +172,7 @@
 
   <footer class="footer">
     <div class="footer-content">
-      <div class="footer-title">VeriTXT</div>
+      <img src="/static/images/logo%20VeriTXT%20white.png" alt="logo" class="footer-logo">
       <div class="footer-buttons">
         <button class="footer-button" name="model" onclick="window.location.href='/'">Test</button>
           <button class="footer-button" name="model" onclick="window.location.href='/'">Home</button>

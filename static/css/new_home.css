@@ -2,12 +2,23 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
   }
+
+  .nav-sides {
+    height: 60px;
+    width: 110px;
+  }
+  .nav-sides img {
+    height: 60px;
+    width: auto;
+  }
   .navbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: white;
-    padding: 0px 40px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1000;
   }
   .navbar .title {
     text-align: center;
@@ -41,10 +52,19 @@ body {
   .background-image {
     width: 100%;
     height: 80vh;
-    background-image: url('/static/images/paint-test-3.jpg');
+    position: relative;
+  }
+
+  .blur-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('/static/images/Data-science-NLP.jpg');
     background-size: cover;
     background-position: center;
-    filter: grayscale(100%);
+    filter: grayscale(100%) blur(3px);
   }
   .centered {
     position: absolute;
@@ -52,30 +72,41 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    background: rgba( 219, 65, 27, 0.6 );
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    border-radius: 30px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 50px;
   }
   .title {
-    font-size: 48px;
+    font-size: 55px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    color: #ffffff;
   }
   .subtitle {
-    font-size: 19px;
-    margin-bottom: 40px;
-    color: #000;
-    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 60px;
+    font-weight: 500;
+    line-height: 1.5;
   }
   .button {
-    background-color: rgb(33, 33, 33);
-    color: #fff;
+    background-color: #ffffff;
+    color: #000;
+    font-weight: bold;
     padding: 12px 30px;
     text-decoration: none;
-    border-radius: 2px;
+    border-radius: 10px;
     font-size: 16px;
-    transition: background-color 0.3s;
+    transition: color 0.3s ease;
     cursor: pointer;
+    border: 1px solid #db411b;
   }
   .button:hover {
-    background-color: #000;
+    transition: color 0.3s ease;
+    color: #b62f18;
+    border-color: #db411b;
   }
 
   .test-section {
@@ -145,9 +176,17 @@ body {
     }
 
   .results-display {
-    padding-left: 40px;
     border-left: 1px solid #ccc;
     text-align: left;
+  }
+
+  .results-display h3 {
+    font-weight: normal;
+    padding: 0 0 0 40px;
+  }
+
+  .results-display p {
+    padding: 0 0 0 40px;
   }
 
   .content {
@@ -228,12 +267,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 20px;
+    padding: 20px;
   }
 
-  .footer-title {
-    font-size: 24px;
-    font-weight: bold;
+  .footer-content img {
+    width: 200px;
+    height: auto;
   }
 
   .footer-buttons {

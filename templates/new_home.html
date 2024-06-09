@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/css/new_home.css">
-    <title>AI Content Detector</title>
+    <link rel="favicon" href="/static/images/logo%20VeriTXT.png">
+    <title>Landing</title>
 </head>
 <body>
     <nav class="navbar">
+        <div class="nav-sides">
+            <img src="/static/images/logo%20VeriTXT.png" alt="logo" class="logo">
+        </div>
         <div class="nav-links">
                 <input type="submit" name="model" value="Home">
             <form action="/EDA" method="post">
@@ -20,19 +24,22 @@
                 <input type="submit" name="model" value="LDA">
             </form>
         </div>
+        <div class="nav-sides"></div>
     </nav>
 
     <div class="container">
-        <div class="background-image"></div>
+        <div class="background-image">
+          <div class="blur-image"></div>
+        </div>
         <div class="centered">
             <div class="title">Detect the AI generated text</div>
-            <div class="subtitle">Welcome to our AI Content Detector. Verify the origins of any text with our tool using Naive Bayes, Logistic Regression, and Neural Networks models.</div>
-            <button class="button" onclick="scrollToTestSection()">Test</button>
+            <div class="subtitle">Welcome to our AI text Detector. Verify the origins of any text with our tool using Naive Bayes, Logistic Regression, and Neural Networks models.</div>
+            <button class="button" onclick="scrollToTestSection()">Try it</button>
         </div>
     </div>
 
     <div class="test-section">
-        <h1>Test the AI Content Detector</h1>
+        <h1>Test our tool</h1>
         <div class="content-wrapper">
             <div class="test-area">
                 <form action='/predict' method="post">
@@ -98,7 +105,7 @@
 
     <footer class="footer">
         <div class="footer-content">
-            <div class="footer-title">VeriTXT</div>
+            <img src="/static/images/logo%20VeriTXT%20white.png" alt="logo" class="footer-logo">
             <div class="footer-buttons">
                 <button class="footer-button" onclick="scrollToTestSection()">Test</button>
                 <input type="submit" name="model" class="footer-button" value="Home">
