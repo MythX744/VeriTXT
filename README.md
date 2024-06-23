@@ -1,5 +1,5 @@
 
-This repository demonstrates the development and evaluation of machine learning models designed to
+  This repository demonstrates the development and evaluation of machine learning models designed to
 distinguish between human-written and AI-generated text. The project encompasses the full
 spectrum of the data science lifecycle, including data preprocessing, exploratory data analysis
 (EDA), model training, and performance evaluation. Three primary models—Logistic Regression,
